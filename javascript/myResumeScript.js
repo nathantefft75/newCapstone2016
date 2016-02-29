@@ -505,8 +505,14 @@ $(document).ready(function(){
 					}, 100);
 		
 	});
-	
-	$("#btnAddSchool").click(function(){
+	$("btnAddSchool").click(function(){
+		addSingleSchool();
+			setTimeout(function () {
+				window.location.reload();	
+					}, 100);
+		
+	});
+	$("#btnEditSchool").click(function(){
 		updateEducation();
 			setTimeout(function () {
 					window.location.reload();
@@ -521,7 +527,7 @@ $(document).ready(function(){
 					}, 100);
 		
 		});
-		$("btnGenerate").click(function(){
+	$("btnGenerate").click(function(){
 		generateLink();
 			setTimeout(function () {
 					fillLink(); 
@@ -534,5 +540,5 @@ $(document).ready(function(){
 				window.location.reload();	
 					}, 100);
 		
-	})
+	});
 });
