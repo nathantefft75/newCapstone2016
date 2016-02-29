@@ -59,6 +59,25 @@ function fillBasic(json){
 	
 	
 }
+//Get video data from user table
+function loadVideo(){
+	var ls = localStorage.getItem("userID");
+	//ls = 113;
+	$.getJSON( "php/php_queries.php", { action:"fillUser", userID: ls } )
+	.done(function(json){
+		fillVideo(json);
+		});
+	
+	
+}
+function fillVideo(json){
+	/*var videoLin = 'https://youtu.be/' + json.Result[0].videoLink;
+	$("#txtLink").val(videoLin);*/
+	var vidFrame = '<iframe width="450" height="253" src="https://www.youtube.com/embed/' + json.Result[0].videoLink + '?rel=0" frameborder="0" allowfullscreen></iframe>'
+	$("#vidEmbed").append(vidFrame);
+
+}
+
 $(window).load(function(){
 	searchLink();
 	
