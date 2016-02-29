@@ -235,8 +235,51 @@ function listEmployersSecondStage(json)
 		$('#companiesDiv').html(str);
 		//console.log("LAST");
 }
-
-
+function landingPageValidate()
+{
+	var feedback = "";
+	var firstName = $('#txtFirstName').val();
+	var lastName = $('#txtLastName').val();
+	var pw = $('#txtPw').val();
+	var email = $('#txtEmail').val();
+	if(firstName.length == 0 || firstName == null )
+	{
+		feedback += "Error: Please Enter First Name";
+	}
+	if(lastName.length == 0 || firstName == null)
+	{
+		feedback += "Error: Please Enter Last Name";
+	}
+	if(email.length == 0 || email == null)
+	{
+		feedback += "Error: Please Enter Email";
+	}
+	else
+	{
+		validateEmail(email);
+		if(resul == false)
+		{
+			feedback += "Error: Please enter Valid Email"
+		}
+	}
+	if(pw.length == 0 || pw == null)
+	{
+		feedback += "Error: Please Enter Password";
+	}
+	if( feedback.includes('Error:'))
+	{
+		alert(feedback);
+	}
+	else
+	{
+		checkEmail();
+	}
+}
+function validateEmail(email) {
+    var re /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var resul = re.test(email)
+	return resul;
+}
 $(document).ready(function(){
 	$('#emptyLogin').hide();
 	$('#invalidLogin').hide();
@@ -257,12 +300,13 @@ $(document).ready(function(){
 /**********************************************/	
 	$("#btnRegister").click(function()
 	{
-		checkEmail();
-		/*insertLanding();
-
+		
+	
+		landingPageValidate();
 		setTimeout(function () {
-			setLocal();
-		}, 100);*/
+			console.log('Passed validate on check email');
+			checkEmail();	
+		}, 100);
 			
 		
 		
