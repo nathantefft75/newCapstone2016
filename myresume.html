@@ -1,0 +1,344 @@
+<!doctype html>
+<!--
+	When you find a change that needs to be made please use the word 'correction' in the note
+	for easy searching.
+
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Professional Self - Online Resume Maker</title>
+<link href="css/mainStyle.css" rel="stylesheet" type="text/css">
+<script src="javascript/jquery-2.1.4.js"></script>
+<script src="javascript/jquery-ui.js"></script>
+<script src="javascript/script.js"></script>
+<script src="javascript/myResumeScript.js"></script>
+</head>
+
+<body onload="pullStatesAndDates()"> <!--ADD pullStatesAndDates() TO SCRIPT-->
+	<header>
+		<div id="headerCenter">
+			<div id="mePicture">
+				<!-- Change background image correction -->
+				<input class="btnEdit" type="button" value="Edit" onclick="toggle(1)">
+			</div>
+			<div id="meBasic">
+			<!--
+				<h3 id="meName">Test Name</h3>
+				<p>phone number</p>
+				<p>email</p>
+				<p>town etc.</p>
+			-->
+			<!--Edit Link correction-->
+			<input class="btnEdit" type="button" value="Edit" onclick="toggle(2)">
+			</div>
+		</div>
+    </header>
+    
+   	<div class="resumeDiv">
+		<div id="meVideo">
+		<!-- youtube embed iFrame -->
+			<div id="vidEmbed">
+				<!--<iframe width="450" height="253" src="https://www.youtube.com/embed/irAZgyaoPoQ?rel=0" frameborder="0" allowfullscreen></iframe>-->
+			</div>
+		<input class="btnEdit" id="btnVideoEdit" type="button" value="Edit" onclick="toggle(3)">
+		</div>
+		<h4>Cover Letter</h4>
+    	<p id="coverLetterText"></p>
+    	<input class="btnEdit" type="button" value="Edit" onclick="toggle(4)">
+	<hr>
+		<div id="meEdu">
+			<!--
+				<h4>Education</h4>
+				<h5>New England Institute of Technology, East Greenwich</h5>
+				<p>Associate degree in software engineering</p>
+				<p>Start date: Then</p>
+				<p>End date: Now</p>
+				<p>GPA: 890</p>
+			-->
+			<!--Edit Link correction-->
+			<input class="btnEdit" type="button" value="Edit" onclick="toggle(5)">
+		</div>
+		<div id="meEmp">
+			<!--
+				<h4>Work Experience</h4>
+				<a href="#"><h5>Carquest/Advance Auto, Sandwich, MA</h5></a>
+				<p>Warehouse Worker</p>
+				<ul>
+					<li>Orginization</li>
+					<li>customer service</li>
+					<li>collaboration</li>
+				</ul>
+				<p>Start date: Then</p>
+				<p>End date: Now</p>
+			-->
+			<!--Edit Link correction-->
+			<input class="btnEdit" type="button" value="Edit" onclick="toggle(6)">
+		</div>
+	<hr>
+		<div id="linkEdit">
+
+		<input class="btnEdit" type="button" value="Edit" onclick="toggle(7)">
+		</div>
+    </div>
+	<div id="editMePicture" class="wrapper editWrap">
+    	<h2 class="RegNow">Profile Picture Edit</h2>
+    	<table class="infoInputs">
+    		<tr><td class="alignTable">Picture:</td><td><input id="btnPicture" type="button" value="Browse"></td></tr>
+    		<tr><td class="alignTable"></td><td><input id="btnEditPicture" type="button" value="Update" action="#"></td></tr>
+			<tr><td class="alignTable"></td><td><input class="btnCancel" type="button" value="Cancel" onclick="toggle(1)"></td></tr>
+    	</table>
+    </div>
+    <div id="basicEditWrap" class="wrapper editWrap">
+    	<h2 class="RegNow">Basic Information Edit</h2>
+    	<table class="infoInputs">
+    		<tr><td class="alignTable">First Name:</td><td><input id="txtFirstName" type="text"></td></tr>
+            <tr><td class="alignTable">Last Name:</td><td><input id="txtLastName" type="text"></td></tr>
+            <tr><td class="alignTable">Email:</td><td><input id="txtEmail" type="text"></td></tr>
+            <tr><td class="alignTable">City:</td><td><input id="txtCity" type="text"></td></tr>
+            <tr><td class="alignTable">State:</td><td>
+            	<select id="state" name="state">
+					<option value="AL">AL</option>
+					<option value="AK">AK</option>
+					<option value="AZ">AZ</option>
+					<option value="AR">AR</option>
+					<option value="CA">CA</option>
+					<option value="CO">CO</option>
+					<option value="CT">CT</option>
+					<option value="DE">DE</option>
+					<option value="DC">DC</option>
+					<option value="FL">FL</option>
+					<option value="GA">GA</option>
+					<option value="HI">HI</option>
+					<option value="ID">ID</option>
+					<option value="IL">IL</option>
+					<option value="IN">IN</option>
+					<option value="IA">IA</option>
+					<option value="KS">KS</option>
+					<option value="KY">KY</option>
+					<option value="LA">LA</option>
+					<option value="ME">ME</option>
+					<option value="MD">MD</option>
+					<option value="MA">MA</option>
+					<option value="MI">MI</option>
+					<option value="MN">MN</option>
+					<option value="MS">MS</option>
+					<option value="MO">MO</option>
+					<option value="MT">MT</option>
+					<option value="NE">NE</option>
+					<option value="NV">NV</option>
+					<option value="NH">NH</option>
+					<option value="NJ">NJ</option>
+					<option value="NM">NM</option>
+					<option value="NY">NY</option>
+					<option value="NC">NC</option>
+					<option value="ND">ND</option>
+					<option value="OH">OH</option>
+					<option value="OK">OK</option>
+					<option value="OR">OR</option>
+					<option value="PA">PA</option>
+					<option value="RI">RI</option>
+					<option value="SC">SC</option>
+					<option value="SD">SD</option>
+					<option value="TN">TN</option>
+					<option value="TX">TX</option>
+					<option value="UT">UT</option>
+					<option value="VT">VT</option>
+					<option value="VA">VA</option>
+					<option value="WA">WA</option>
+					<option value="WV">WV</option>
+					<option value="WI">WI</option>
+					<option value="WY">WY</option>
+				</select>
+            </td></tr>
+            <tr><td class="alignTable">Zip Code:</td><td><input id="txtZipCode" maxlength="5" type="text"></td></tr>
+            <tr><td class="alignTable">Phone Number:</td><td>&nbsp;(<input class="phoneSmall" id="txtPhoneNumber1" maxlength="3" type="text">) <input class="phoneSmall" id="txtPhoneNumber2" maxlength="3" type="text"> - <input class="phoneBig" id="txtPhoneNumber3" maxlength="4" type="text"></td></tr>
+            
+        </table>
+        <table class="infoInputs">
+        	<tr><td class="alignTable"></td><td><input id="btnEditBasic" type="button" value="Update" action="#"></td></tr>	
+        	<tr><td class="alignTable"></td><td><input class="btnCancel" type="button" value="Cancel" onclick="toggle(2)"></td></tr>	
+        </table>
+    </div>
+    <div id="editVideo" class="wrapper editWrap">
+    	<h2 class="RegNow">Video Link Edit</h2>
+    	<table class="infoInputs">
+    		<tr><td class="alignTable">Video Link:</td><td><input id="txtLink" type="text"></td></tr>
+			<center>Please enter in a youtube link</center>
+    		<tr><td class="alignTable"></td><td><input id="btnEditVideo" type="button" value="Update" action="#"></td></tr>
+    		<tr><td class="alignTable"></td><td><input class="btnCancel" type="button" value="Cancel" onclick="toggle(3)"></td></tr>
+    	</table>
+    </div>
+	<div id="editCover" class="wrapper editWrap">
+    	<h2 class="RegNow">Cover Letter Edit</h2>
+    	<table class="infoInputs">
+		<br/>
+    		<center><textarea id="txtCoverLetter" rows="8" cols="40"></textarea></center>
+    		<center><input id="btnEditCover" type="button" value="Update" action="#"></center><br/>
+    		<center><input class="btnCancel" type="button" value="Cancel" onclick="toggle(4)"></center>
+    	</table>
+    </div>
+	<div id="editEdu" class="editWrap">
+		<table id="divTable">
+			<td><div class="wrapper">
+				<h2 class="RegNow">Add your Education</h2>
+				<table class="infoInputs">
+					<tr><td class="alignTable">School Name:</td><td><input id="txtSchoolName" type="text"></td></tr>
+					<tr><td class="alignTable">Degree Program:</td><td><input id="txtDegree" type="text"></td></tr>
+					<tr><td class="alignTable">Start Date:</td><td>
+						<select id="txtEdStartMonth" name="month">
+							<option value="January">January</option>
+							<option value="February">February</option>
+							<option value="March">March</option>
+							<option value="April">April</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">August</option>
+							<option value="September">September</option>
+							<option value="October">October</option>
+							<option value="November">November</option>
+							<option value="December">December</option>
+						</select>
+						<select id="txtEdStartYear" name="year">
+							<option value="2010">2010</option>
+							<option value="2011">2011</option>
+							<option value="2012">2012</option>
+							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+							<option value="2015">2015</option>
+							<option value="2016">2016</option>
+						</select>
+					</td></tr>
+					<tr><td id="alignTable">End Date:</td><td>
+						<select class="txtEdEndMonth" name="month">
+							<option value="January">January</option>
+							<option value="February">February</option>
+							<option value="March">March</option>
+							<option value="April">April</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">August</option>
+							<option value="September">September</option>
+							<option value="October">October</option>
+							<option value="November">November</option>
+							<option value="December">December</option>
+						</select>
+						<select id="txtEdEndYear" name="year">
+							<option value="2010">2010</option>
+							<option value="2011">2011</option>
+							<option value="2012">2012</option>
+							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+							<option value="2015">2015</option>
+							<option value="2016">2016</option>
+						</select>
+					</td></tr>
+					<tr><td class="alignTable">GPA:</td><td><input id="txtGPA" maxlength="4" type="text"></td></tr>
+				</table>
+				<table class="infoInputs">
+					<center><input id="btnAddSchool" type="button" value="Add School" action="addEducation"></center><br/>
+					<center><input id="btnEditSchool" type="button" value="Update School" onclick="updateEducation()"></center><br/>
+					<center><input class="btnCancel" type="button" value="Cancel" onclick="toggle(5)"></center>
+				</table>
+			</div></td>
+				<td><div class="wrapper">
+				<h2 class="RegNow">Schools Added</h2>
+				<div id="schoolsDiv"></div>
+			</div></td>
+		</table>
+	</div>
+	<div id="editEmp" class="editWrap">
+		<table id="divTable">
+    		<td><div class="wrapper">
+    			<h2 class="RegNow">Edit Employer Information</h2>
+    			<table class="infoInputs">
+            		<tr><td class="alignTable">Employer Name:</td><td><input id="txtEmpName" type="text"></td></tr>
+            		<tr><td class="alignTable">Position:</td><td><input id="txtPosition" type="text"></td></tr>
+            		<tr><td class="alignTable">Start Date:</td><td>
+  						<select class="txtEmpStartMonth" name="month">
+    						<option value="January">January</option>
+							<option value="February">February</option>
+							<option value="March">March</option>
+							<option value="April">April</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">August</option>
+							<option value="September">September</option>
+							<option value="October">October</option>
+							<option value="November">November</option>
+							<option value="December">December</option>
+  						</select>
+  						<select class="txtEmpStartYear" name="year">
+    						<option value="2010">2010</option>
+    						<option value="2011">2011</option>
+    						<option value="2012">2012</option>
+    						<option value="2013">2013</option>
+    						<option value="2014">2014</option>
+    						<option value="2015">2015</option>
+    						<option value="2016">2016</option>
+  						</select>
+            		</td></tr>
+            		<tr><td class="alignTable">End Date:</td><td>
+  						<select class="txtEmpEndMonth" name="month">
+    						<option value="January">January</option>
+							<option value="February">February</option>
+							<option value="March">March</option>
+							<option value="April">April</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">August</option>
+							<option value="September">September</option>
+							<option value="October">October</option>
+							<option value="November">November</option>
+							<option value="December">December</option>
+  						</select>
+  						<select class="txtEmpEndYear" name="year">
+    						<option value="2010">2010</option>
+    						<option value="2011">2011</option>
+    						<option value="2012">2012</option>
+    						<option value="2013">2013</option>
+    						<option value="2014">2014</option>
+    						<option value="2015">2015</option>
+    						<option value="2016">2016</option>
+  						</select>
+            		</td></tr>
+					<!--Change id to txtLink from txtGPA. This was a copy paste error. correction-->
+            		<tr><td class="alignTable">Employer Link:</td><td><input id="txtEmpLink" type="text"></td></tr>
+					<!--Change id to txtLink from txtResponsibilities. This was a copy paste error. correction-->
+            		<tr><td class="alignTable">Responsibilities:</td><td><input id="txtResp" type="text"></td></tr>
+ 					
+        		</table>
+        		<table class="infoInputs">
+        			<center><input id="btnAddEmployer" type="button" value="Add Employer" onclick="updateEmployer()"></center>
+        			<center><input id="btnEditEmployer" type="button" value="Update Employer" ></center><br/>
+        			<center><input class="btnCancel" type="button" value="Cancel" onclick="toggle(6)"></center>
+        		</table>
+    		</div></td>
+    		<td><div class="wrapper">
+    			<h2 class="RegNow">Companies Added</h2>
+    			<div id="companiesDiv"></div>
+    		</div></td>
+    	</table>
+    </div>
+	<div id="linkGen" class="editWrap">
+		<div class="wrapper">
+		<center>
+		Company Name:<input class="text" id= "txtCompanyName" type="text" >
+		<div id = 'newLink'></div>
+		<input class="btnGenerateLink" type="button" value="Generate">
+		<input class="btnCancel" type="button" value="Cancel" onclick="toggle(7)">
+		
+		</center>
+		</div>
+		<div class="push"></div>
+	</div>
+    <footer>
+	<img src="images/logo.png"></img> <br />
+	<p>&copy; My Professional Self 2016</p>
+	</footer>
+</body>
+</html>

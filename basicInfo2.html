@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Professional Self - Online Resume Maker</title>
+<link href="css/mainStyle.css" rel="stylesheet" type="text/css">
+<script src="javascript/jquery-2.1.4.js"></script>
+<script src="javascript/script.js"></script>
+</head>
+
+<body onload="pullStates()">
+	<header>
+    	<a href="index.html"><img id="imgMainLogo" src="images/logo.png"></img></a>
+    	<div class="loginDiv">
+        	<table>
+                <tr><td class="alignTable">Username:</td><td><input id="txtLoginUsername" type="text"></td></tr>
+                <tr><td class="alignTable">Password:</td><td><input id="txtLoginPassword" type="password"></td></tr>
+                <tr><td class="alignTable"><input id="btnLogin" type="button" value="Login" action="#"></td><td id="loginForgot"><a href="#">Forgot your password?</a></td></tr>
+            </table>
+    	</div>
+    </header>
+    
+   	<div class="wrapper">
+    	<h2 id="RegNow">Basic Information</h2>
+    	<table class="infoInputs">
+            <tr><td class="alignTable">City:</td><td><input id="txtCity" type="text"></td></tr>
+			<tr><td class="alignTable">State:</td><td><div id=showStates></div></td></tr>
+            <tr><td class="alignTable">Zip Code:</td><td><input id="txtZipCode" type="text"></td></tr>
+            <tr><td class="alignTable">Phone Number:</td><td>&nbsp;(<input class="phoneSmall" id="txtPhoneNumber1" type="text">) <input class="phoneSmall" id="txtPhoneNumber2" type="text"> - <input class="phoneBig" id="txtPhoneNumber3" type="text"></td></tr>
+            <tr><td class="alignTable">Video Link:</td><td><input id="txtLink" type="text"></td></tr>
+            
+        </table>
+        <table class="infoInputs">
+        			<tr><td class="alignTable"></td><td><input id="btnNext-Edu" type="button" value="Next" action="#"></td></tr>	
+        		</table>
+    </div>
+    
+    <footer>&copy; My Professional Self 2016</footer>
+</body>
+</html>

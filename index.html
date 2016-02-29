@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Professional Self - Interactive Online Resume Maker</title>
+<link href="css/mainStyle.css" rel="stylesheet" type="text/css">
+<link href="css/indexStyle.css" rel="stylesheet" type="text/css">
+<script src="javascript/jquery-2.1.4.js"></script>
+<script src="javascript/script.js"></script>
+</head>
+
+<body >
+	<header>
+    	<img id="imgMainLogo" src="images/logo.png"></img>
+		<h1 id="headerName">My Professional Self</h1>
+    	<div class="loginDiv">
+        	<table>
+                <tr><td class="alignTable">Username:</td><td><input id="txtLoginUsername" type="text"></td></tr>
+                <tr><td class="alignTable">Password:</td><td><input id="txtLoginPassword" type="password"></td></tr>
+                <tr><td class="alignTable"><input id="btnLogin" type="button" value="Login"></td><td id="loginForgot"><a href="#">Forgot your password?</a></td></tr>
+				<tr id="emptyLogin"><td>Missing login information</td></tr><tr id="invalidLogin"><td>Invalid login information</td></tr>
+            </table>
+    	</div>
+    </header>
+    <div class="wholePage">
+		<div class="wrapper">
+			<h2 id="RegNow">Register for your online resume now!</h2>
+			<table class="infoInputs">
+				<tr><td class="alignTable">First Name:</td><td><input id="txtFirstName" type="text"></td></tr>
+				<tr><td class="alignTable">Last Name:</td><td><input id="txtLastName" type="text"></td></tr>
+				<tr><td class="alignTable">Email:</td><td><input id="txtEmail" type="text"></td></tr>
+				<tr><td class="alignTable">Password:</td><td><input id="txtPw" type="password"></td></tr>
+			</table>
+			<center><input id="btnRegister" type="button" value="Register" action="#"></center>
+		</div>
+	</div>
+    <footer>&copy; My Professional Self 2016</footer>
+</body>
+</html>
