@@ -45,7 +45,7 @@ function loginTest()
 function finalUserTest(json)
 {
 	$('#emptyLogin').hide();
-	$('#invalidLogin').show();
+	$('#invalidLogin').hide();
 
     if( json.Result == false )
     {	cosnole.log('hi');
