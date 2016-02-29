@@ -23,8 +23,9 @@ function direct(json){
 	}
 	else{
 		
-			 localStorage.setItem("userID", json.Result.userID );
+		localStorage.setItem("userID", json.Result.userID );
 		pullBasic();
+		loadVideo();
 			
 		
 		
