@@ -20,8 +20,7 @@ function direct(json){
 	
 	if(json.Result == false){
 		window.location = "index.html";
-	}
-	else{
+	}else{
 		
 		localStorage.setItem("userID", json.Result.userID );
 		pullBasic();
